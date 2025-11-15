@@ -2,6 +2,7 @@ import React, { type ReactNode } from "react";
 import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
+import "./teamcards.css";
 
 function WebsiteLink({ to, children }: { to: string; children?: ReactNode }) {
   return (
@@ -13,15 +14,15 @@ function WebsiteLink({ to, children }: { to: string; children?: ReactNode }) {
   );
 }
 
-function CompanyLink({ to, children }: { to: string; children?: ReactNode }) {
-  return (
-    <Link to={to}>
-      {children ?? (
-        <Translate id="team.profile.CompanyLinkLabel">company</Translate>
-      )}
-    </Link>
-  );
-}
+// function CompanyLink({ to, children }: { to: string; children?: ReactNode }) {
+//   return (
+//     <Link to={to}>
+//       {children ?? (
+//         <Translate id="team.profile.CompanyLinkLabel">company</Translate>
+//       )}
+//     </Link>
+//   );
+// }
 
 type ProfileProps = {
   className?: string;
@@ -41,7 +42,7 @@ function TeamProfileCard({
   linkedInUrl
 }: ProfileProps) {
   return (
-    <div className={className}>
+    <div className={`team-profile-card ${className}`}>
       <div className="card card--full-height">
         <div className="card__header">
           <div className="avatar avatar--vertical">
@@ -75,7 +76,7 @@ function TeamProfileCard({
               <Link className="button button--secondary" href={twitterUrl}>
                 Twitter
               </Link>
-            )}            
+            )}
           </div>
         </div>
       </div>
@@ -94,9 +95,9 @@ export function ActiveTeamRow(): JSX.Element {
     <div className="row">
       <TeamProfileCardCol
         name="Ajay Dhangar"
-        githubUrl="https://github.com/ajay-dhangar"      
+        githubUrl="https://github.com/ajay-dhangar"
         linkedInUrl="https://www.linkedin.com/in/ajay-dhangar"
-        twitterUrl="https://twitter.com/CodesWithAjay"  
+        twitterUrl="https://twitter.com/CodesWithAjay"
       >
         <Translate
           id="team.profile.Sebastien Lorber.body"
@@ -111,24 +112,6 @@ export function ActiveTeamRow(): JSX.Element {
           }
         </Translate>
       </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="MOHD ARIF"
-        githubUrl="https://github.com/mrmohdarif"
-        linkedInUrl="https://www.linkedin.com/in/mohd-arif-115b87231/"
-      >
-        <Translate
-          id="team.profile.Sebastien Lorber.body"
-          values={{
-            compony: <CompanyLink to="https://www.linkedin.com/company/techneutron/" />,
-            portfolio: <Link to="https://mrmohdarif.github.io/portfolio/">Portfolio</Link>,
-          }}
-        >
-          {
-            "Lead Developer at CodeHarborHub, we are passionate about contributing to open source. Currently working at {compony} and  Explore {portfolio}."
-          }
-        </Translate>
-      </TeamProfileCardCol>
-
       {/* other team members */}
     </div>
   );
@@ -173,7 +156,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
             "B.Tech student, open source enthusiast, and tech blogger. He loves to contribute to open source and write articles on his {websiteLink}."
           }
         </Translate>
-      </TeamProfileCardCol>      
+      </TeamProfileCardCol>
     </div>
   );
 }

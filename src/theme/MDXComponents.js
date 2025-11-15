@@ -1,27 +1,23 @@
-import MDXComponents from '@theme-original/MDXComponents';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-import TutorialAuthors from '@site/src/components/TutorialAuthors';
-import Contributors from '@site/src/components/Contributors';
-import Table from '@site/src/components/Table';
-import ArrayVisualizations from '@site/src/components/DSA/arrays/ArrayVisualizations';
-import SelectionSortVisualization from '@site/src/components/DSA/arrays/SelectionSortVisualization';
-import BubbleSortVisualization from '@site/src/components/DSA/arrays/BubbleSortVisualization';
-import BrowserWindow from '@site/src/components/BrowserWindow';
-import GiscusComponent from '@site/src/components/GiscusComponent';
-import CollectionList from '@site/src/components/CollectionList';
-import { FaReact } from 'react-icons/fa';
-import Courses from '@site/src/components/Courses';
-import DocCardList from '@theme/DocCardList';
-import Highlight from '@site/src/components/Highlight';
-import InsertionSortVisualization from '@site/src/components/DSA/arrays/InsertionSortVisualization';
-import File from '@site/src/components/File';
-import Lesson from '@site/src/components/Lesson';
-import Image from '@theme/IdealImage';
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-import Author from '@site/src/components/Author';
+
+import AdsComponent from "@site/src/components/AdsComponent";
+import BrowserWindow from "@site/src/components/BrowserWindow";
+import Courses from "@site/src/components/Courses";
+import File from "@site/src/components/File";
+import GiscusComponent from "@site/src/components/GiscusComponent";
+import Highlight from "@site/src/components/Highlight";
+import Lesson from "@site/src/components/Lesson";
+import SolutionAuthor from "@site/src/components/SolutionAuthor";
+import MDXComponents from "@theme-original/MDXComponents";
+import DocCardList from "@theme/DocCardList";
+import Image from "@theme/IdealImage";
+import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs";
+import { FaReact } from "react-icons/fa";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import Comming from "@site/src/components/Comming";
+import Admonition from '@theme/Admonition';
+import TOCInline from '@theme/TOCInline';
 
 export default {
   // Re-use the default mapping
@@ -30,23 +26,18 @@ export default {
   SolutionAuthor,
   Tabs,
   TabItem,
-  TutorialAuthors,
-  Table,
-  Contributors,
   BrowserWindow,
   Highlight,
   GiscusComponent,
-  ArrayVisualizations,
-  BubbleSortVisualization,
-  SelectionSortVisualization,
-  CollectionList,
   DocCardList,
   FaReact,
   Courses,
-  InsertionSortVisualization,
   File,
   Lesson,
   Image,
   LiteYouTubeEmbed,
-  Author
+  AdsComponent,
+  Comming,
+  Admonition,
+  TOCInline,
 };
